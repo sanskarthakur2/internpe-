@@ -1,0 +1,17 @@
+from tkinter import *
+import time as t
+
+dc = Tk()
+dc.title("DIGITAL CLOCK")
+dc.geometry("500x200")
+
+def time():
+    d=t.strftime("%H:%M:%S %p")
+    l.config(text=d)
+    l.after(1000,time)
+
+l=Label(dc,font=('Arial',45),bg="black",fg="green")
+l.pack()
+
+time()
+mainloop()
